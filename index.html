@@ -8,10 +8,16 @@
                 font-family:arial;
                 font-size:14px;
             }
+            body {
+                padding:0;
+                margin:0;
+                height:100%;
+            }
 
             .container {
                 padding-left:140px;
                 position:relative;
+                min-height:100%;
             }
 
             #heading {
@@ -41,6 +47,9 @@
                 padding-left:10px;
 
             }
+
+            /* These are the All/Images/Videos/News/Shopping/More/Settings/Tools Links */
+
             .imglinks ul {
                 padding-top:25px;
                 text-decoration:none;
@@ -108,6 +117,7 @@
             .information {
                 padding:10px;
             }
+            /* .ago is the grey text in top stories, .source is the green text source */
             .ago {
                 padding-top:90px;
                 position:absolute;
@@ -137,6 +147,9 @@
                 position:absolute;
                 margin-left:420px; 
             }
+
+            /* Sidebox is the box to the right with general information on the query */
+
             .sidebox {
                 width:455px;
                 height:760px;
@@ -193,6 +206,9 @@
                 position:absolute;
                 margin-top:320px;
             }
+
+            /* This stuff is all about the results themselves */
+
             .resultsitems {
                 position:absolute;
                 width:600px;
@@ -212,6 +228,9 @@
             .result {
                 padding-bottom:30px;
             }
+
+            /* Meta info is included for the wikipedia entry on the musical, not on the other results */
+
             .metainfoleft {
                 width:300px;
                 position:absolute;
@@ -230,6 +249,9 @@
             .metainforight a, .metainfoleft a{
                 text-decoration:none;
             }
+
+            /* paa stands for "People Also Ask" */
+
             .paatitle {
                 font-size:22px;
                 color:rgb(83, 83, 83);
@@ -250,6 +272,87 @@
                 border-bottom: 1px solid lightgray;
                 padding-left:none;
                 font-size:20px;
+            }
+            .result3 {
+                position:absolute;
+                margin-top:300px;
+            }
+            .description {
+                color:rgb(49, 49, 49);
+            }
+            .result4 {
+                position:absolute;
+                margin-top:400px;
+            }
+            .result5 {
+                position:absolute;
+                margin-top:500px;
+            }
+            .result6 {
+                position:absolute;
+                margin-top:600px;
+            }
+            .result7 {
+                position:absolute;
+                margin-top:700px;
+            }
+            .result8 {
+                position:absolute;
+                margin-top:800px;
+            }
+            .result9 {
+                position:absolute;
+                margin-top:900px;
+            }
+            .relatedsearches {
+                position:absolute;
+                margin-top:800px;
+                margin-left:170px;
+                height:200px;
+                width:380px;
+            }
+            .relatedsearchestitle {
+                font-size:18px;
+                line-height:44px;
+            }
+            .relatedlinks a {
+                text-decoration:none;
+                column-count:2;
+                column-gap:40px;
+                height:200px;
+            }
+            .relatedlinks li {
+                list-style-type:none;
+                padding:3px;
+            }
+            .relatedlinks ul {
+                column-count:2;
+            }
+            .pagination {
+                position:absolute;
+                margin-top:940px;
+                margin-left:300px;
+            }
+            .pagination ul {
+                margin-left:27px;
+                            }
+            .pagination li {
+                list-style-type:none;
+                display:inline;
+                padding-left:8px;
+            }
+            .pagination a {
+                text-decoration:none;
+            }
+            .footer {
+                position:absolute;
+                right:0;
+                bottom:0;
+                left:0;
+                background-color:red;
+                color:white;
+                overflow:hidden;
+                margin-bottom:-1000px;
             }
 
         </style>
@@ -274,13 +377,13 @@
                     </ul>
                 </div>
             </div>
-            </div>
             <div id="heading-right">
                 <button class="btn">Sign In</button>
             </div>
-            <div class="results">
+        </div>
+        <div class="results">
                 About 4,790,000,000 results (0.56 seconds)
-            </div>
+        </div>
         <div class="topstories"><h2>Top stories</h2><br>
             <div class="story1">
                 <img width="300" src="data:image/jpeg;base64,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"><br>
@@ -302,46 +405,46 @@
                 <div class="ago">1 hour ago</div></div>
             <div class="more"><a href="http://127.0.0.1:5500/index.html#">➔ More for cats</a></div>
         </div>
-            <div class="sidebox">
-                <div class="sideboximg">
-<img src="./index_files/n0HKEq9.png">
-                </div>
-                <div class="sideboxtitle">
-                    Cat
-                    <div class="sideboxsubtitle">
-                        Animal
-                    </div>
-                </div>
-                <div class="sideboxinfo">
-                    The cat or domestic cat is a small carnivorous mammal. 
-                    It is the only domesticated species in the family Felidae. 
-                    The cat is either a house cat, kept as a pet; or a feral cat, 
-                    freely ranging and avoiding human contact. A house cat is 
-                    valued by humans for companionship and for its ability to 
-                    hunt rodents. <a href="http://127.0.0.1:5500/index.html#">Wikipedia</a><br><br>
-                    <strong>Lifespan:</strong> 2 - 16 years (in the wild)<br><br>
-                    <strong>Gestation Period:</strong> 58 - 67 days<br><br>
-                    <strong>Daily sleep:</strong> 12 - 16 hours<br><br>
-                    <strong>Mass:</strong> 7.9 - 9.9 lbs (Adult)<br><br>
-                    <strong>Scientific Name:</strong> Felis catus<br><br>
-                    <strong>Did you know:</strong> Cats love to play and will
-                    appreciate simple and inexpensive toys. 
-                    <a href="http://127.0.0.1:5500/index.html#">humanesociety.org</a>
-                </div>
-                <div class="breeds">
-                    <span class="breedstitle">Breeds</span><span class="viewmore">View 20+ more</span><br>
-                    <ul>
-                        <li><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAEBQAGAgMHAf/EADcQAAIBAwIDBQYEBQUAAAAAAAECAwAEERIhBTFBEyJRYXEGFCMyodFigZHBQnOxsvAHFSVSkv/EABgBAQEBAQEAAAAAAAAAAAAAAAECAwAE/8QAHREBAQEAAgIDAAAAAAAAAAAAAAERAjEDIRIyQf/aAAwDAQACEQMRAD8AawpGWZmjJH8s+HpRaS20Tu8qhEVclmTAHLxFeIJY0kUxcmO+qkHtTNJK9tZFdKu3aSYOcgYAH1+lO4wk24sQvLO6jElm0cqg4JQZwfA01tXhEIzEc/yz9q5ja3f+z8QWcZ7BjolX8J6+o510+1L+6owjUqy5BD7EUy6q8cbbBoSJS0Z+c4wh+1Vf2gYySXfZ5UAgAA6fCrNYs4ilOj+In5vWqlxBhLLelsj4nTpjTTO0/gbh8DaXklJAxy5+FbYjnpjvVstJdaSRoB3RtnahlmSAK1xNHEpJxr5npsBv+dJb7knsomUblD/dUrTeMUSBXcZAIJAyPmqU8Y63FpuLWZ7VpFlGQWyBH5nzql8fV14tE5Or4IztjGGP3q+QiH3Q5mbV38fEPiaoHtlG1nxNJIWPZ4C6gc+eD5c/0FZculeP7FnFINtS5IO52qxexXtCIrAcO4hOU7IlYWIB7vQH9qr8knvUICqy4Gx8q9tYIEOQdyefOjV2a6Pb3Ufu8vZ3Ctkk7EeJqq33a+73ZaFgWlPzAjPy1sWRcIInI07Y5DlzrXdGdYi0dxIXXbSu/d3xtTOSfgXSXo4XE5mjAndcpGWP/pvAeXX60nJkvHluJ27RyCST0HpWPEraRrztJGLO/wA2of5vTWztG0RxkBY270h/CNz+uw/OjtXR7Da5traK5QsUtkz5HAz9alFrf2zziSRVCyphMEc8ipVyVncDDiUQHZCJBlsaj50JJ2PEY2MsUZ0v8vMZHU+lLiyyXgQlu6wOy0XwxDDGQQwDMTlhvjar8lnxxvPHw4+5Ad5ZmQOkUjRnY6V2JGd8HxxnFBz2i8MlF3ZyzdggBlSSTWJTk5UZPPGMHY5NNLhoHbdgGzsOVH8PtUYFZXVtQxpcjl/WvPiLNZS2RjjDwn4Z3G/Ok1xNciaPsoJp5pNRjhiIB0qN2JPIfrR/GON8OhuWtJ5lHZ4XB5AY5UNFDZXgF4zu5EYjVkOds52HLn+1LqT2l+17kS2xhYrqjOoMG9D47+HWmPCmBhluJMgyIcb5JAByfqBWKLBDKwi1HUCBqA7oJB6cuQ/Simf4jqIQxWE76c88fer8c2njN7bS8PY2IAO7kDl/2rym/slw1uJcU4croBHFrlkBTkFYY9Mkiva0vLBarhYEs6qVBPzH+Kt7SlEZXc6s8hQsbtoad8d3IT1oSSbWhwzDffHjXn23tdrejMWY97rjEjDPlzoiz4miHXNIU0YBVmP7mk3v8sJygVvI9awbi1qzj3iBh+JdwDSlv4yOHcY4xA0gZE3Ezpt2g6DPT7flTFJYLe2ZYVVIlGAq52+hpPNPZ4yLhWVhjAB5edDPNHIQqMzY2Bbp+VINOGzPLIWnOEwSQM8qYxF5u1mWX4bKcZBBXcUmLKthJpZi4K6mPhnH2orgMwkmETsFV8IS3TPj9KePLDuOlf6axNHcSa9ybYkHxBcVKdcIhjtfaee1hGI4rKNV9BpqU3tF9uOX06xEQIxwgxuOdLo5iHIJAB65walSoWxmbbSBkk4wTmgXTUzADOK9qVzmmSyBO2QRtvWUFuyHfJxzG5xXtSkGkMf/AB9zjm0ec+O4rDh75j1ZwR0zUqUOdE4Dx+axmius9oZLcR4YasYK8t6lSpRbWVf/2Q=="><br>
-                        <a href="http://127.0.0.1:5500/index.html#">Russian Blue</a></li>
-                        <li><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAGAAMEBQcBAv/EADAQAAIBAwMCBQQBAwUAAAAAAAECAwAEEQUSITFBBhRRYXETIiOBsWKhwQcyQlKR/8QAGAEBAAMBAAAAAAAAAAAAAAAAAwECBAD/xAAdEQADAQACAwEAAAAAAAAAAAAAAQIREiEDMUEi/9oADAMBAAIRAxEAPwDOm8OQFR5W/QljhVdMZ/Youu4Y7KGFFIxHH93HXAAoftra6hhEYjDNG5OQelPapPdLCpELTNjqW4TnOcd6yOb1NvcFritSJ1tdQyRyGEllGR6YOOlX+s6Utytlb7yrW8I2jHBOOc0JaHCklwEZyFZgSV6s3oK0d0mlZHEIBYYJJ+7j9UqerslzKv8APoxHxIZBrl2pDI0b7MdCMCokV9dxD7ZWI9G5rebn/Tix8S20stwPLXrAbbiLknA4BHQ+n/lBuo/6NeILdw1ncWl1ECATkxn34ORx81b5gT3QPESXPl1uI13NGCxAxgnmm5dFQn8Uh+M0XReC9WGoSC6jjtoo+A7OG3D+lRyf3ge9Rb60WxuGh3mT6Y3MSu3t0xk0LqkNxT9ghLpksLZLA+mRiuVZ6hMjqApPoK5VuT+huUE/1Pxh0B3DHCjrXjzDOwL8EDjPT4qP5gH7WVh6jb0pyPbI6xo27LYHrzXN6SpDbwd4bGrst/dLGIUOVjUcsff0o+u9JjVkeUqoPYcAUz4StBY6NDBggouSPfrT3iPTG17RprGK58s7YKye4IPPscYpuKUh8tZaWn0YIjsI47+9V+oX+2FWf7g+crnihfw94V1rw9odxbz6kJmDb4gJGcAYAPJAPXnoBzQdqfjDW7XWI9Ph0x5xkDvlzjtxyf4NUrS6QR34so/qSxIN/UhlP84zQTrgDkzo4dXwM5zj90Y39u7RtIrPDK6HjPKms+ubmaSPbM5ZiTkmhtjSgXvWXzBP/E5I9jSp7U4l3hxwAecUquE80L4ME4HUtir/AMJaONR1eJ5Y1KQnJJHvxQ7p9tumSOUKW4w0ZAGfiti8NaZBp+mh0BLsQzNjk1MrWQ3iLNbdogUVgvpzUBdQEMsjXIY7G4ReQ3z3q9lhEsQbHb90N3mjzzGVld42557kVoYKKPXfE0+o6nBDbNd2UPIlkVAVYfB7+/8APFOXOtLpUIgiJaNlH5W/3Z757d6rrzT7wyGLZuUYB55qFcWUsiKJg4MZ6E9sf4/zQ0h5rrDl7qB+lJeSszhRzj0rPbu63XEjxsNjMWAPajbV40g0m46jjC47nNAckYGcfsUNvHgsrUQr12ZwXwVxxj1pU8Y0cjcoJpVKpFHD007whY+cvVeYxSJGeGWPaSfT9VqSqqRRRDGM8iss8H6gsU301G1g5VlPVeeAfX5rUbaMvaGWQ89gKXxh2dF49qxDnKjjNexqULRyMxGAtQdaX6VuSB9pHXb3oREk7yyxI5+mSDyfSlplJCsyQefIJHO1tvqOQf5/tVPqiRM8o4+0dR0NVbeZj/IrnJXAPfGc1DnnuCCjMNp4471TGIsIutIJ9OljjQtuP2gDNCMvh/UJE3GDaP6jijCe9FmEXGWb+1V+o6riAjfjPsaC5W6PDeYBM1nJbvtkAB9M0qlXH5GL7t2TnNKi0TC9017g3RaOBV2yZdVGHjwcEt89RnrWt+HNXjvY0tYx92zccmu0q1ePp4Y67RL8TLJ5NlJ2jGQfSs/tbkPdW8DEhDjc3/bNKlU0+yUvyEeo2smN7L9KILwDQtG63MzPGcxqcL712lU0zoKvV5Ee7Mar9QADledpoa1ZRHIrruCvnnsSOo+RSpUHk7G8fshAkfFKlSoDQf/Z"><br>
-                        <a href="http://127.0.0.1:5500/index.html#">Persian cat</a></li>
-                        <li><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIDBAUGB//EADIQAAEEAgAEAgkDBQEAAAAAAAEAAgMRBCEFEjFBE3EGIlFhgZGhscFC0fAUIzPh4jL/xAAZAQEBAQEBAQAAAAAAAAAAAAACAAEEAwX/xAAdEQEBAAICAwEAAAAAAAAAAAAAAQIREiEDMUET/9oADAMBAAIRAxEAPwDuWhPCa0UAnjz+aBADVJfNKOguwlWoz7qrxLPh4bhPy8kPMTKBDBZ2QNfNWnLM9I8V2dwXKx468RzQ5od3IIdXxqviq+l9X8WeLKgjyMeRskUg5mPadOCbPlww5EGO59zzkiJg2SALJ8tdVxfo5xWH0YgfiZbzNJPIH+ERbWOI2Gn779pW5wqCLI43NxTGkMkMjDGfEB52SWLbv9IA+qp22zTe8kiU9D113QkBjT038k9p3+VG0++/Luixrp5oElB7ge3QSE++72mc1+fuQwueabse1avYcbHVRSOPKWgHetm6VrwA4UbSvhaGgAUVWqRxHpF6PZeY0HhzLnNFu6bzDoSF1uDiHCxIYpP8pZzSbuz0P2V7F/tSetVIzTeXJ7ND6fz5rccdRZXaAk3ur93dIg3V9kJCrc1dTSC71TsbH8/KgDxY2bqjvaA/+BCFT5pSXCMXbvoFoYYDGgO0sOGV/iSyctkEgfDX4WhgTySEF4Q5dnrpr+GOXmbfxVbIdQJHZX8foFhf1HPnyMv1CfV94r97TCLDcgtaJHDXl1TWyF7eZxBJ3s/RNyBWU4HTWVQvtQSg9h9EhPJsc1A9+qFHrrr3pFqUGscRtwH3TvCiY1z3zhrGizrQA7rHgzMHKYypXMc4dGvtYPpfkTYmO04khlha8Ga3fpH+6XN+j14uw4RlRyg8p5tdR3WtFGOYcopcRw7DdxFkGdh8XyMeOrEUUTXNYao99roseHMMjK4p03X9LV+frLZW2N7Ime2Lw4XNEh6WsSaM4M0Er3Nc0PDXBvYFOy8fIcRz8ULXHu3G/wCk2LhkkkEkWRnvmExHrMi5HNIN6skdvYnyg6aWS65XPB1fUHWtKK9a33oBWcDDGNC1gdJMa26R1ud5lRZkIhkaQPVcOh7H2L0l2FR2e1FCZq7utV1QkLx/Bgljc7wpCHdua6U2S6eZskctEEUbBCRC+X5OnZir8I4nkcHkbG4vdBdMAP8A5XT4XpjNNOyPHfJTzWmE3+UIXpLyx3V906jG47kRxyPnxZSGNLnOFUAPZvakbxjLzOU48Mcbar+5s/Hf7oQl48remZ4ydtDHhyXY5OXkkRtBefCBbSrY8heL5jXQG7+CVC7MZHNaks+8FCEJi//Z"><br>
-                        <a href="http://127.0.0.1:5500/index.html#">Siamese cat</a></li>
-                        <li><img src="data:image/jpeg;base64,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"><br>
-                        <a href="http://127.0.0.1:5500/index.html#">Scottish Fold</a></li>
-                        <li><img src="data:image/jpeg;base64,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"><br>
-                        <a href="http://127.0.0.1:5500/index.html#">Maine Coon</a></li>
-                    </ul>
+        <div class="sidebox">
+            <div class="sideboximg">
+                <img src="./index_files/n0HKEq9.png">
+            </div>
+            <div class="sideboxtitle">
+            Cat
+            <div class="sideboxsubtitle">
+            Animal
+            </div>
+            </div>
+            <div class="sideboxinfo">
+                The cat or domestic cat is a small carnivorous mammal. 
+                It is the only domesticated species in the family Felidae. 
+                The cat is either a house cat, kept as a pet; or a feral cat, 
+                freely ranging and avoiding human contact. A house cat is 
+                valued by humans for companionship and for its ability to 
+                hunt rodents. <a href="http://127.0.0.1:5500/index.html#">Wikipedia</a><br><br>
+                <strong>Lifespan:</strong> 2 - 16 years (in the wild)<br><br>
+                <strong>Gestation Period:</strong> 58 - 67 days<br><br>
+                <strong>Daily sleep:</strong> 12 - 16 hours<br><br>
+                <strong>Mass:</strong> 7.9 - 9.9 lbs (Adult)<br><br>
+                <strong>Scientific Name:</strong> Felis catus<br><br>
+                <strong>Did you know:</strong> Cats love to play and will
+                appreciate simple and inexpensive toys. 
+                <a href="http://127.0.0.1:5500/index.html#">humanesociety.org</a>
+            </div>
+            <div class="breeds">
+                <span class="breedstitle">Breeds</span><span class="viewmore">View 20+ more</span><br>
+                <ul>
+                    <li><img src="data:image/jpeg;base64,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"><br>
+                    <a href="http://127.0.0.1:5500/index.html#">Russian Blue</a></li>
+                    <li><img src="data:image/jpeg;base64,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"><br>
+                    <a href="http://127.0.0.1:5500/index.html#">Persian cat</a></li>
+                    <li><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAQIDBAUGB//EADIQAAEEAgAEAgkDBQEAAAAAAAEAAgMRBCEFEjFBE3EGIlFhgZGhscFC0fAUIzPh4jL/xAAZAQEBAQEBAQAAAAAAAAAAAAACAAEEAwX/xAAdEQEBAAICAwEAAAAAAAAAAAAAAQIREiEDMUET/9oADAMBAAIRAxEAPwDuWhPCa0UAnjz+aBADVJfNKOguwlWoz7qrxLPh4bhPy8kPMTKBDBZ2QNfNWnLM9I8V2dwXKx468RzQ5od3IIdXxqviq+l9X8WeLKgjyMeRskUg5mPadOCbPlww5EGO59zzkiJg2SALJ8tdVxfo5xWH0YgfiZbzNJPIH+ERbWOI2Gn779pW5wqCLI43NxTGkMkMjDGfEB52SWLbv9IA+qp22zTe8kiU9D113QkBjT038k9p3+VG0++/Luixrp5oElB7ge3QSE++72mc1+fuQwueabse1avYcbHVRSOPKWgHetm6VrwA4UbSvhaGgAUVWqRxHpF6PZeY0HhzLnNFu6bzDoSF1uDiHCxIYpP8pZzSbuz0P2V7F/tSetVIzTeXJ7ND6fz5rccdRZXaAk3ur93dIg3V9kJCrc1dTSC71TsbH8/KgDxY2bqjvaA/+BCFT5pSXCMXbvoFoYYDGgO0sOGV/iSyctkEgfDX4WhgTySEF4Q5dnrpr+GOXmbfxVbIdQJHZX8foFhf1HPnyMv1CfV94r97TCLDcgtaJHDXl1TWyF7eZxBJ3s/RNyBWU4HTWVQvtQSg9h9EhPJsc1A9+qFHrrr3pFqUGscRtwH3TvCiY1z3zhrGizrQA7rHgzMHKYypXMc4dGvtYPpfkTYmO04khlha8Ga3fpH+6XN+j14uw4RlRyg8p5tdR3WtFGOYcopcRw7DdxFkGdh8XyMeOrEUUTXNYao99roseHMMjK4p03X9LV+frLZW2N7Ime2Lw4XNEh6WsSaM4M0Er3Nc0PDXBvYFOy8fIcRz8ULXHu3G/wCk2LhkkkEkWRnvmExHrMi5HNIN6skdvYnyg6aWS65XPB1fUHWtKK9a33oBWcDDGNC1gdJMa26R1ud5lRZkIhkaQPVcOh7H2L0l2FR2e1FCZq7utV1QkLx/Bgljc7wpCHdua6U2S6eZskctEEUbBCRC+X5OnZir8I4nkcHkbG4vdBdMAP8A5XT4XpjNNOyPHfJTzWmE3+UIXpLyx3V906jG47kRxyPnxZSGNLnOFUAPZvakbxjLzOU48Mcbar+5s/Hf7oQl48remZ4ydtDHhyXY5OXkkRtBefCBbSrY8heL5jXQG7+CVC7MZHNaks+8FCEJi//Z"><br>
+                    <a href="http://127.0.0.1:5500/index.html#">Siamese cat</a></li>
+                    <li><img src="data:image/jpeg;base64,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"><br>
+                    <a href="http://127.0.0.1:5500/index.html#">Scottish Fold</a></li>
+                    <li><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAEBQAGAgMHAf/EADEQAAIBAwMBBwIGAwEBAAAAAAECAwAEEQUSITEGEyJBUWFxFIEykaGx0fAVQsFyJP/EABoBAAIDAQEAAAAAAAAAAAAAAAECAwQFBgD/xAAgEQACAgIBBQEAAAAAAAAAAAAAAQIRAyESBBMiMTJB/9oADAMBAAIRAxEAPwDikERfy4rd9IfSt1kPBRhHStLFgi4psqTytSoX/SY6ivRap54z6UcwrqmnaZp2qdl7U3FrCFMS7FK8jjB2nrnOeRz60csYYqbVhhJz/TkK2UZrMadGfOrVf9k50uStgxkTONsg2sp9Ceh+ftgUJa6FJJLsluUjG1H3gbgQ2OmPTP6GjGXTNWLLup0L9D7Lvq16IUYrEvikcDOB5Ae5/k+VWyLsVZWczALJuB8O7z96snZzTJdIAt7buRNuO8OSSW4wScDIxxx059aJ1q7jkugImUzKoEnd52k89M8+vmazM+VO5Q0XcEHaUtlO1Ts/H3LMpOQPyqU8vAxtnzjOKlU1Ob/S68cUcqsfwUZQdj+Ci/Kulw/CMHJ9Mhq+9hNW/wDhmtHMMaxFfHIODuPQAD2PJPXFUMVcuw9r3dhd3hjVneRVh3jglefyyRn/AM0vV12WHD9lzuIbySGe7jj3PFGTEmzaZAOdo56mh5NLC6w5YbYe6SJyf9wHygIA9NqkeeKJikQNBDPGzSwrs3SE552ksMjA6Hp5Gl93rs04uGlRVnjlJQrwCFbKHnrgYHwtc9LN227WjUhi5+g/TrcS20FvK7teLFmTbEzYlCkkBgMHHi88ZBqvm6muNUM019JOqqF7ok4T1BB6H7DPHyWWn3Mg0CztkYvdm2WOTLLvKYIHHGRgnzz155NLLu3jhkaV4LpZDhfqBjxt+nHXjHGOCaHJtWxox4vQXfsqWz5xkipSftSbizi3AN3TKBux09jUoErd7Od2P4KKoOyPgordXSYX4IxMi8mZZro3YG1efRGS1LiUylnypGVPGAT06HpVC0uxfULpYkZV9SzAfuRXZNC05dJ0+EbAqIN7c9fSq/X5F2+JL08XysY2emW7W7W86qsuwrGdxIHtvzn5wf3rOTRJnt4I4YIE7mVTK8kmTIgOdjYPK+x/mtUl3LLO0jzLHGFACJ1z8DPNCpeXME80s8Igt9y47xtgPHT5LED7558NY8JxbLzUktGdxbd7qcskLK0iklkhZiN37Z+1EDS4LW2W5uXRigyAxyv996Bgvo7O8vI7Ve6n2h8RplGU48RIyOueevPPSkmpdpoyZmfUlikEYxHIwDofgDDD8/tXrV6QfJ+2C9uLwf4acq6uH48ak8exx1HFSqjeX8t7G0eozRnPDLbswVvQhT0PqOOvHpUplEF0VW1bw1aezHZoazDLdXdybW0jYIHC7mdz5KKQ6Bo97qz7LOLgfikfhF+T/wAHNdOtLBrC1s4bjUGuI7ZCyQxpsVSpJZ+uT+IffB4q/m6l4sPj7K8MHOe/RholjaaXJ9N/lGeFjlduQTgcjhvb0p3FJcrmexK3cLNym4g/386q0x021njlsLIbj0eUs5GfTPzTO11qWB9sc6QqD4iAASKy5ZsmR3PZbWOEFUSytNeIqzJPb2ERPj3w5OP3H3pfqEFleXP1d1fRzRQnci95uy2eNqA9fc/zSRNVuLvUJRJOhs4UImZmGXLDwj3HP980cl9cmGymZEa5njKOZE4kdcggjqpIGQQfXrxTxixGy1aok9xiRVFtFIN3crhW5HXJHh8s+/uaqGvW9nbyKydzGV3SOE3MRkZ68DJ9PX1rVDqbIgVtrOOQhCts4xvUgZz+nsKUX92Z7fE8nfiQDa4YkLj05/PipeItnubnV5oIIAyqTtOT0yfv/RUpx2Q0/wCpt5Z4xEpVsu+7O0jBP3xj4z9qlRznxdDRjasB7N9oBZRrHu2hfQDj9KcX+u6ZflRdqS2wqZQdpCnqMjr8VKlO4pgUmKLz/FXIQHUdQIjULGCy4UDoOlal+mMwlOqXClfN8H/leVK9QbDDqMC2txbi6WRZwA5KbTwODkH4oK5vFlt+47/cqqTGzHxqx4IJ/wBgc+xGBUqUy0BpCdy8bK8e4kEEDOf2o6wisroYu3uLdyOeQyt7nw8GpUrzeha2Wix13T9M02S3tO7wvTz3H1Oep6VKlSoeCZLyZ//Z"><br>
+                    <a href="http://127.0.0.1:5500/index.html#">Maine Coon</a></li>
+                </ul>
                     
                 </div>
             </div>
@@ -351,16 +454,15 @@
                     <a href="http://127.0.0.1:5500/index.html#">Complete Guide to Caring for Cats |
                          Cat Breed Information, Cat ...</a>
                 </div>
-                    <div class="greenlink">
-                        <a href="http://127.0.0.1:5500/index.html#">www.vetstreet.com/cats/ ▼</a>
-                    </div>
-                        <div class="description">
-                            Your <strong>cat's</strong> online owner's manual,
-                            featuring articles about breed information, <strong>cat</strong>
-                            selection, training, grooming and care for <strong>cats</strong>
-                            and kittens.
-                        </div></div>
-                
+                <div class="greenlink">
+                    <a href="http://127.0.0.1:5500/index.html#">www.vetstreet.com/cats/ ▼</a>
+                </div>
+                    <div class="description">
+                        Your <strong>cat's</strong> online owner's manual,
+                        featuring articles about breed information, <strong>cat</strong>
+                        selection, training, grooming and care for <strong>cats</strong>
+                        and kittens.
+                    </div></div>
                 <div class="resulttitle">
                     <a href="http://127.0.0.1:5500/index.html#">Cats (musical) - Wikipedia</a>
                 </div>
@@ -372,14 +474,14 @@
                     Andrew Lloyd Webber, based on Old Possum's Book of Practical 
                     Cats by T. S. Eliot. The musical tells the story of a ...
                 </div>
-                            <div class="metainfoleft">
-                                <strong>Music</strong>: <a href="http://127.0.0.1:5500/index.html#">Andrew Lloyd Webber</a><br>
-                                <strong>Awards</strong>: <a href="http://127.0.0.1:5500/index.html#">Laurence Olivier Award for Best New...</a>
-                            </div>
-                            <div class="metainforight">
-                                    <strong>Premiere</strong>: May 11, 1981; 37 years ago: <a href="http://127.0.0.1:5500/index.html#">New L...</a><br>
-                                    <strong>Basis</strong>: <a href="http://127.0.0.1:5500/index.html#">Old Possum's Book of Practical Cats;</a> by ...
-                                </div>
+                    <div class="metainfoleft">
+                        <strong>Music</strong>: <a href="http://127.0.0.1:5500/index.html#">Andrew Lloyd Webber</a><br>
+                        <strong>Awards</strong>: <a href="http://127.0.0.1:5500/index.html#">Laurence Olivier Award for Best New...</a>
+                    </div>
+                    <div class="metainforight">
+                            <strong>Premiere</strong>: May 11, 1981; 37 years ago: <a href="http://127.0.0.1:5500/index.html#">New L...</a><br>
+                            <strong>Basis</strong>: <a href="http://127.0.0.1:5500/index.html#">Old Possum's Book of Practical Cats;</a> by ...
+                        </div>
                     <div class="paa">
                         <ul>
                         <li><span class="paatitle">&nbsp;&nbsp;People also ask</span></li>
@@ -389,8 +491,130 @@
                         <li>&nbsp;&nbsp;How do you take care of a cat for beginners?</li>
                         </ul>
                     </div>
+                    <div class="result3">
+                                            <div class="resulttitle">
+                            <a href="http://127.0.0.1:5500/index.html#">Cats | Animal Planet</a>
+                        </div>
+                        <div class="greenlink">
+                            <a href="http://127.0.0.1:5500/index.html#">www.animalplanet.com/pets/cats/ ▼</a>
+                        </div>
+                        <div class="description">
+                            Explore our guide to <strong>cats</strong>, kittens and their habitats. 
+                            Learn about over a hundred different <strong>cat</strong> breeds and how 
+                            to deal with troubled <strong>cats.</strong>
+                        </div> </div>
+                    <div class="result4">
+                        <div class="resulttitle">
+                            <a href="http://127.0.0.1:5500/index.html#">Cat Breed Collection | Purina</a>
+                        </div>
+                    <div class="greenlink">
+                        <a href="http://127.0.0.1:5500/index.html#">https://www.purina.com > Cats ▼</a>
+                    </div>
+                    <div class="description">
+                    Trying to decide what type of <strong>cat</strong> is right for you and 
+                    your family? Browse through our list of popular <strong>cat</strong> breeds, 
+                    and find the best breed for your lifestyle.
+                    </div> </div>
+                    <div class="result5">
+                    <div class="resulttitle">
+                        <a href="http://127.0.0.1:5500/index.html#">Cats: Adoption, Bringing A Cat Home and Care - Petfinder</a>
+                    </div>
+                    <div class="greenlink">
+                        <a href="http://127.0.0.1:5500/index.html#">https://petfinder.com/cats/ ▼</a>
+                    </div>
+                    <div class="description">
+                        Everything you need to know about how to adopt a <strong>cat</strong>, 
+                        bringing your new <strong>cat</strong> home, <strong>cat</strong> health
+                        and care and more!
+                </div> </div>
+                    <div class="result6">
+                            <div class="resulttitle">
+                                <a href="http://127.0.0.1:5500/index.html#">Cat Health Center | Cat Care and Information from WebMD</a>
+                            </div>
+                            <div class="greenlink">
+                                <a href="http://127.0.0.1:5500/index.html#">https://webmd.com > Healthy Cats ▼</a>
+                            </div>
+                            <div class="description">
+                                WebMD veterinary experts provide comprehensive information about <strong>cat</strong> health care, offer nutrition
+                                and feeding tips, and help you identify illnesses in <strong>cats</strong>.
+                        </div> </div>
+                    <div class="result7">
+                            <div class="resulttitle">
+                                <a href="http://127.0.0.1:5500/index.html#">Cat Behavior: Things Your Cat Wants to Tell You | Reader's Digest</a>
+                            </div>
+                            <div class="greenlink">
+                                <a href="http://127.0.0.1:5500/index.html#">https://rd.com/advice/how-to-decode-your-cats-behavior/ ▼</a>
+                            </div>
+                            <div class="description">
+                                Wish you had a secret decoder guide to <strong>cat</strong> behavior and <strong>cat</strong>
+                                language? Here's a primer to things your <strong>cat</strong> cat wishes you understood.
+                        </div> </div>
+                    <div class="result8">
+                            <div class="resulttitle">
+                                <a href="http://127.0.0.1:5500/index.html#">How Your Cat Is Making You Crazy - The Atlantic</a>
+                            </div>
+                            <div class="greenlink">
+                                <a href="http://127.0.0.1:5500/index.html#">https://theatlantic.com/magazine/archive/2012/03/how-your-cat-is/.../308873 ▼</a>
+                            </div>
+                            <div class="description">
+                                Jaroslav Flegr is no kook. And yet, for years, he suspected his mind had
+                                been taken over by parasites that had invaded his brain. So the prolific ...
+                        </div> </div>
+                    <div class="result9">
+                            <div class="resulttitle">
+                                <a href="http://127.0.0.1:5500/index.html#">The Mystery of the Wasting House-Cats - The New York Times</a>
+                            </div>
+                            <div class="greenlink">
+                                <a href="http://127.0.0.1:5500/index.html#">https://nytimes.com/2017/05/16/ .../the-mystery-of-the-wasting-house-cats.html ▼</a>
+                            </div>
+                            <div class="description">
+                                Most days, the back room of the Animal Endocrine Clinic in Manhattan
+                                is home to half a dozen <strong>cats</strong> convalescing in feline luxury.
+                                They lounge ...
+                        </div> </div>
             </div>
+        <div class="relatedsearches">
+            <div class="relatedsearchestitle">
+                Searches related to cats
             </div>
+            <div class="relatedlinks">
+                <ul>
+                <li><a href="#">cats <strong>musical</strong></a></li>
+                <li><a href="#">cats <strong>breeds</strong></a></li>
+                <li><a href="#">cats <strong>broadway</strong></a></li>
+                <li><a href="#">cats <strong>movie</strong></a></li>
+                <li><a href="#">cats <strong>the musical tour 2018</strong></a></li>
+                <li><a href="#">cats <strong>musical characters</strong></a></li>
+                <li><a href="#">cats <strong>musical london</strong></a></li>
+                <li><a href="#">cats <strong>the musical cast</strong></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pagination"><img src="https://i.imgur.com/WZrWCR7.png"><br>
+       <ul>
+           <li><a href="#">1</a></li>
+           <li><a href="#">2</a></li>
+           <li><a href="#">3</a></li>
+           <li><a href="#">4</a></li>
+           <li><a href="#">5</a></li>
+           <li><a href="#">6</a></li>
+           <li><a href="#">7</a></li>
+           <li><a href="#">8</a></li>
+           <li><a href="#">9</a></li>
+           <li><a href="#">10</a></li>
+           <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next</a></li>
+       </ul>
+        
+        </div>
+        </div>
+<!--       <div class="footer">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Send Feedback</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div> -->
         
     
     <!-- Code injected by live-server -->
